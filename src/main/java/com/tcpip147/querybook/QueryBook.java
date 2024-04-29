@@ -86,7 +86,7 @@ public class QueryBook {
                 if ("query".equals(query.getNodeName())) {
                     NamedNodeMap attributes = query.getAttributes();
                     String id = parseAttributeValue(attributes, "id");
-                    String name = parseAttributeValue(attributes, "name");
+                    String desc = parseAttributeValue(attributes, "desc");
                     String creator = parseAttributeValue(attributes, "creator");
                     String createdDate = parseAttributeValue(attributes, "createdDate");
                     if (startup) {
@@ -95,7 +95,7 @@ public class QueryBook {
                         }
                         startup = false;
                     }
-                    queryStore.put(id, new Query(id, name, creator, createdDate, trim(query.getTextContent()), injectComment));
+                    queryStore.put(id, new Query(id, desc, creator, createdDate, trim(query.getTextContent()), injectComment));
                 }
             }
         }
