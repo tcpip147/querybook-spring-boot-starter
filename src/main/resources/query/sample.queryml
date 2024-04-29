@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queryMap>
+    <query id="select" desc="Select" creator="tcpip147" createdDate="2024-04-29">
+        <![CDATA[
+        SELECT * FROM MY_TABLE
+        ]]>
+    </query>
+</queryMap>
